@@ -77,11 +77,11 @@ import TelemetryClient
 
 @main
 struct TelemetryTestApp: App {
+
+    // (1) Add the scenePhase env var to your App
+    @Environment(\.scenePhase) var scenePhase
+
     var body: some Scene {
-        
-        // (1) Add the scenePhase env var to your App
-        @Environment(\.scenePhase) var scenePhase
-    
         WindowGroup {
             ContentView()
         }
